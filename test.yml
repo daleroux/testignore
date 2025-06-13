@@ -1,0 +1,11 @@
+- hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Print only prompted and play variables
+      debug:
+        var: vars
+
+    - name: Print all variables/facts for this host
+      debug:
+        var: hostvars[inventory_hostname]
