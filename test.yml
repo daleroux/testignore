@@ -4,8 +4,5 @@
   tasks:
     - name: Print only prompted and play variables
       debug:
-        var: vars
+        msg: "{{ var1 }}"
 
-    - name: Print all variables/facts for this host
-      debug:
-        var: hostvars[inventory_hostname]
